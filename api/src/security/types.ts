@@ -55,6 +55,11 @@ export interface ApiSecurityConfig {
   csrfProtectionEnabled: boolean;
   csrfTrustedOrigins: string[];
   localCredentials?: LocalCredentials;
+  rateLimitEnabled: boolean;
+  rateLimitWriteMaxRequests: number;
+  rateLimitWriteWindowMs: number;
+  rateLimitReadMaxRequests: number;
+  rateLimitReadWindowMs: number;
 }
 
 export type EnvMap = Record<string, string | undefined>;
